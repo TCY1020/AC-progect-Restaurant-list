@@ -14,18 +14,20 @@
           <input type="text" class="form-control" id="name_en" placeholder="English name" name="name_en" >
         </div>
         <div class="d-flex justify-content-evenly">
-          <div class="form-group d-flex flex-column">
-            <label for="category">類別*</label>
-            <select class="form-select mt-2 " name="category" id="category"required >
-              <option selected>選擇餐廳類型</option>
-              <option value="中華料理">中華料理</option>
-              <option value="中東料理">中東料理</option>
-              <option value="日本料理">日本料理</option>
-              <option value="義式餐廳">義式餐廳</option>
-              <option value="美式">美式</option>
-              <option value="酒吧">酒吧</option>
-              <option value="咖啡">咖啡</option>
-           </select>
+          <div class="mb-3">
+            <label for="category" class="form-label">分類<span class="text-danger">*</span></label>
+            <input type="text" class="form-control" id="category" placeholder="中華料理" list="categoryOptions" name="category"
+                  required />
+              {{! 使用datalist，讓使用者可選擇或自行輸入 }}
+            <datalist id="categoryOptions">
+              <option>中華料理</option>
+              <option>中東料理</option>
+              <option>日本料理</option>
+              <option>義式料理</option>
+              <option>美式</option>
+              <option>酒吧</option>
+              <option>咖啡</option>
+            </datalist>
           </div>
           <div class="form-group d-flex flex-column">
             <label for="rating" class="form-label"></i>評分*</label>
