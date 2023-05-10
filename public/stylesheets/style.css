@@ -10,6 +10,7 @@ header {
   color: #226089;
 }
 
+
 .banner {
   position: relative;
   z-index: -1;
@@ -19,7 +20,7 @@ header {
   background-size: cover;
   filter: blur(3px);
 }
-
+.form-outer,
 .search-bar .search-bar-outer {
   margin: 0 auto;
   max-width: 680px;
@@ -30,10 +31,11 @@ header {
   margin-top: -60px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
 }
-
+.form-title,
 .search-bar .search-bar-inner h4 {
   color: #9b4b4b;
 }
+
 
 .form-control::placeholder {
   color: #aaaaaa;
@@ -76,6 +78,22 @@ header {
   text-align: center;
   font-size: 3rem;
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.form-title-box {
+  margin: auto;
+  margin-top: 40px;
+  padding: 16px 0;
+  max-width: 550px;
+  background-color: #faf1ec;
+  border-radius: 5px;
+  border: 0px;
+}
+
+.form-title {
+  text-align: center;
+  margin: auto;
+  font-size: larger;
 }
 
 @media screen and (max-width: 992px) {

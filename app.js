@@ -17,7 +17,7 @@ mongoose.connect(process.env.MONGODB_URI,{
   useUnifiedTopology: true
 })
 const db = mongoose.connection
-db.on('erro', () =>{
+db.on('error', () =>{
   console.log('mongodb error')
 })
 db.once('open', () =>{
@@ -49,6 +49,10 @@ app.get('/restaurants/:restaurant_id', (req, res) => {
   // res.render('show', {
   //   restaurant: restaurantDetail
   // })
+})
+
+app.get('/restaurant/new',(req, res) =>{
+  res.render('new')
 })
 app.get('/search', (req, res) => {
   const keyword = req.query.keyword.trim().toLowerCase()
@@ -90,6 +94,9 @@ app.get('/search', (req, res) => {
   // }
   
 })
+
+
+
 app.listen(port, () => {
   console.log(`Restaurant-list is running on http://localhost:${port}`)
 })
