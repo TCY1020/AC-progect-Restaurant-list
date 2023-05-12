@@ -20,8 +20,7 @@ header {
   background-size: cover;
   filter: blur(3px);
 }
-.form-outer,
-.search-bar .search-bar-outer {
+.form-outer {
   margin: 0 auto;
   max-width: 680px;
   background-color: #fce2cf;
@@ -30,6 +29,11 @@ header {
   border: 0;
   margin-top: -60px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+.search-bar .search-bar-outer{
+  /*outline: 3px solid tomato;*/
+  margin: 15px auto;
+  max-width: 980px;  
 }
 .form-title,
 .search-bar .search-bar-inner h4 {
