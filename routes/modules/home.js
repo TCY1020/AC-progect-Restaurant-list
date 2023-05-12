@@ -6,15 +6,18 @@ const Restaurant = require('../../models/Restaurant.js')
 
 
 router.get('/', (req, res) => {
+  const sort = req.query.sort  
   Restaurant.find()
     .lean()
-    .then(restaurants => res.render('index', { restaurants }))
+    .sort(`${sort}`)
+    .then(restaurants => res.render('index', { restaurants, sort: sort }))
     .catch(error => console.error(error))
+  console.log(`${sort}`)
 })
 // 搜尋餐廳
 router.get('/search', (req, res) => {
   const keyword = req.query.keyword.trim().toLowerCase()
-  Restaurant.find()
+    Restaurant.find()
     .lean()
     .then(restaurants => {
       const filteredRestaurants = restaurants.filter(item =>
