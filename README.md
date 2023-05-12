@@ -20,7 +20,6 @@
 + dotenv: 16.0.3
 + mongoose: 5.9.7
 + body-parser": 1.20.2
-+ 
 ## Installing - 專案安裝流程
 1. 請先確認有安裝 node.js 與 npm
 2. 創造一個專案資料夾，打開您的 terminal，使用`cd`指令進入您剛創建的資料夾
