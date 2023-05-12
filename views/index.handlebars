@@ -11,16 +11,17 @@
           </div>
         </div>
       </form>
-      <select class="form-select-sm-3" aria-label=".form-select-sm example">
-        <option selected>Open this select menu</option>
-        <option value="1">最新</option>
-        <option value="2">最舊</option>
-        <option value="3">評分最高→低</option>
-        <option value="4">評分最低→高</option>
-        <option value="5">A-Z</option>
-        <option value="6">Z-A</option>
+      <form action="/">
+      <select class="form-select-sm-3" aria-label="Default select example" name="sort" onchange="this.form.submit()">
+        <option value=""{{#unless sort}} disabled {{/unless}} selected>選擇排序方式</option>
+        <option value="-_id" {{#choose sort "-_id"}}selected{{/choose}} >最新</option>
+        <option value="_id" {{#choose sort "_id"}}selected{{/choose}}>最舊</option>
+        <option value="-rating" {{#choose sort "-rating"}}selected{{/choose}}>評分最高→低</option>
+        <option value="rating" {{#choose sort "rating"}}selected{{/choose}}>評分最低→高</option>
+        <option value="name_en" {{#choose sort "name_en"}}selected{{/choose}}>A-Z</option>
+        <option value="-name_en" {{#choose sort "-name_en"}}selected{{/choose}}>Z-A</option>
       </select>
-
+      </form>
     </div>
   </div>
 </div>

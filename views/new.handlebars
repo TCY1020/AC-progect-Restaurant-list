@@ -2,23 +2,23 @@
   <div class="form-outer">
     <div class="form-inner">
       <form class="row g-4" action="/restaurants" method="post">
-       <div class="form-title-box">
-        <div class="form-title"><i class="fas fa-utensils pr-2 me-3"></i>增加餐廳清單</div>
-       </div>
+        <div class="form-title-box">
+          <div class="form-title"><i class="fas fa-utensils pr-2 me-3"></i>增加餐廳清單</div>
+        </div>
         <div class="col-12">
           <label for="name" class="form-label">餐廳名稱*</label>
-          <input type="text" class="form-control" id="name" placeholder="請輸入餐廳名" name="name" required>          
+          <input type="text" class="form-control" id="name" placeholder="請輸入餐廳名" name="name" required>
         </div>
         <div class="col-12">
           <label for="name_en" class="form-label"></i>餐廳英文名稱</label>
-          <input type="text" class="form-control" id="name_en" placeholder="English name" name="name_en" >
+          <input type="text" class="form-control" id="name_en" placeholder="English name" name="name_en">
         </div>
         <div class="d-flex justify-content-evenly">
           <div class="mb-3">
             <label for="category" class="form-label">分類<span class="text-danger">*</span></label>
-            <input type="text" class="form-control" id="category" placeholder="中華料理" list="categoryOptions" name="category"
-                  required />
-              
+            <input type="text" class="form-control" id="category" placeholder="中華料理" list="categoryOptions"
+              name="category" required />
+
             <datalist id="categoryOptions">
               <option>中華料理</option>
               <option>中東料理</option>
@@ -37,14 +37,14 @@
             <label for="phone" class="form-label"></i>連絡電話*</label>
             <input type="text" class="form-control" id="phone" placeholder="02-XXXX-XXXX" name="phone" required>
           </div>
-        </div >
+        </div>
         <div class="col-12">
           <label for="location" class="form-label"></i>地址*</label>
           <input type="text" class="form-control" id="location" placeholder="餐廳地址" name="location" required>
         </div>
         <div class="form-group d-flex flex-column">
-        <label for="description" class="form-label">描述餐聽特色*</label>
-        <textarea id="description" name="description" rows="2" cols="20" placeholder="餐描述餐聽特色" required></textarea>
+          <label for="description" class="form-label">描述餐聽特色*</label>
+          <textarea id="description" name="description" rows="2" cols="20" placeholder="餐描述餐聽特色" required></textarea>
         </div>
         <div class="col-12">
           <label for="image" class="form-label">照片*</label>
@@ -52,7 +52,8 @@
         </div>
         <div class="col-12">
           <label for="google-map" class="form-label">Google Map 網址*</label>
-          <input type="text" class="form-control" id="google-map" placeholder="請輸入Google Map網址" name="google_map" required>
+          <input type="text" class="form-control" id="google-map" placeholder="請輸入Google Map網址" name="google_map"
+            required>
         </div>
         <div class="col-12">
           <button type="submit" class="btn btn-major me-3">新增</button>
