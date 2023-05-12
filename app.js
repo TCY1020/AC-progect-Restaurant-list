@@ -1,27 +1,13 @@
 const express = require('express')
-const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
 const exphbs = require('express-handlebars')
 const Restaurant = require('./models/Restaurant.js')
-if (process.env.NODE_ENV !== 'production') {
-  require('dotenv').config()
-}
+
 
 const app = express()
 const port = 3000
 
-// mongoDB連線
-mongoose.connect(process.env.MONGODB_URI,{
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-})
-const db = mongoose.connection
-db.on('error', () =>{
-  console.log('mongodb error')
-})
-db.once('open', () =>{
-  console.log('mongodb connected!')
-})
+require('./config/mongoose.js')
 
 app.engine('handlebars', exphbs({defaultLayout: 'main'}))
 app.set('view engine', 'handlebars')
