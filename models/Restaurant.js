@@ -38,4 +38,6 @@ const restaurantSchema = new Schema({
     }
 })
 
+//透過 module.exports 輸出
+//mongoose.model會在 mongo 中建立名為 Restaurants 的 collection用restaurantSchema的json格式
 module.exports = mongoose.model('Restaurants', restaurantSchema)
