@@ -1,7 +1,7 @@
 # AC-project-Restaurant-
 **這是使用 Node.js + Express + MongoDB + Mongoose 與 RESTful架構風格設計的一個餐廳網站。**
 ## 專案畫面
-![MyImage](https://github.com/TCY1020/AC-progect-Restaurant-list/blob/main/public/img/%E9%A4%90%E5%BB%B3%E9%A6%96%E9%A0%81.png)
+![MyImage](https://github.com/TCY1020/AC-progect-Restaurant-list/blob/main/public/img/%E9%A4%90%E5%BB%B3%E9%A6%96%E9%A0%81%E6%8E%92%E5%BA%8F%E5%8A%9F%E8%83%BD.png?raw=true)
 ![MyImage](https://github.com/TCY1020/AC-progect-Restaurant-list/blob/main/public/img/%E5%85%A7%E5%AE%B9%E4%BB%8B%E7%B4%B9.png)
 ## Features - 產品功能
 + 查看所以餐廳
