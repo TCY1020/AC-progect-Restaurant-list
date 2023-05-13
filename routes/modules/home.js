@@ -25,16 +25,12 @@ router.get('/search', (req, res) => {
         item.name_en.toLowerCase().includes(keyword) ||
         item.category.toLowerCase().includes(keyword)
       )
-      if (filteredRestaurants.length !== 0) {
-        res.render('index', {
+      res.render('index', {
           restaurants: filteredRestaurants,
           keyword: req.query.keyword
         })
-      } else {
-        res.render('error', {
-          keyword: req.query.keyword
-        })
-      }
+      
+        
     })
 })
 
