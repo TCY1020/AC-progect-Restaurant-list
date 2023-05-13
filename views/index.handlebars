@@ -12,15 +12,15 @@
         </div>
       </form>
       <form action="/"> <!--TODO:onchange="this.form.submit()"-->
-      <select class="form-select-sm-3" aria-label="Default select example" name="sort" onchange="this.form.submit()">
-        <option value=""{{#unless sort}} disabled {{/unless}} selected>選擇排序方式</option>
-        <option value="-_id" {{#choose sort "-_id"}}selected{{/choose}} >最新</option>
-        <option value="_id" {{#choose sort "_id"}}selected{{/choose}}>最舊</option>
-        <option value="-rating" {{#choose sort "-rating"}}selected{{/choose}}>評分最高→低</option>
-        <option value="rating" {{#choose sort "rating"}}selected{{/choose}}>評分最低→高</option>
-        <option value="name_en" {{#choose sort "name_en"}}selected{{/choose}}>A-Z</option>
-        <option value="-name_en" {{#choose sort "-name_en"}}selected{{/choose}}>Z-A</option>
-      </select>
+        <select class="form-select-sm-3" aria-label="Default select example" name="sort" onchange="this.form.submit()">
+          <option value="" {{#unless sort}} disabled {{/unless}} selected>選擇排序方式</option>
+          <option value="-_id" {{#choose sort "-_id" }}selected{{/choose}}>最新</option>
+          <option value="_id" {{#choose sort "_id" }}selected{{/choose}}>最舊</option>
+          <option value="-rating" {{#choose sort "-rating" }}selected{{/choose}}>評分最高→低</option>
+          <option value="rating" {{#choose sort "rating" }}selected{{/choose}}>評分最低→高</option>
+          <option value="name_en" {{#choose sort "name_en" }}selected{{/choose}}>A-Z</option>
+          <option value="-name_en" {{#choose sort "-name_en" }}selected{{/choose}}>Z-A</option>
+        </select>
       </form>
     </div>
   </div>
@@ -52,11 +52,13 @@
                   <button type="submit" class="btn btn-outline-danger">Delete</button>
                 </form>
               </span>
-              </div>
             </div>
           </div>
+        </div>
         {{else}}
-        <div class="prompt"><h1>查無此餐廳請重新搜尋</h1></div>
+        <div class="prompt">
+          <h1>查無此餐廳請重新搜尋</h1>
+        </div>
         {{/each}}
       </div>
     </div>
