@@ -3,7 +3,6 @@ const bodyParser = require('body-parser')
 const exphbs = require('express-handlebars')
 const methodOverride = require('method-override')
 
-const handlebarsHelper = require('./config/handlebarsHelper.js')
 const routers = require('./routes')
 const app = express()
 const port = 3000
