@@ -12,7 +12,6 @@ router.get('/', (req, res) => {
     .sort(`${sort}`)
     .then(restaurants => res.render('index', { restaurants, sort: sort }))
     .catch(error => console.error(error))
-  console.log(`${sort}`)
 })
 // 搜尋餐廳
 router.get('/search', (req, res) => {

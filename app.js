@@ -9,8 +9,10 @@ const app = express()
 const port = 3000
 
 require('./config/mongoose.js')
+//將handlebars的自訂helper工具載入controller
+require('./config/handlebarsHelper.js')
 
-app.engine('handlebars', exphbs({ defaultLayout: 'main', handlebarsHelper }))
+app.engine('handlebars', exphbs({ defaultLayout: 'main'}))
 app.set('view engine', 'handlebars')
 app.use(express.static('public'))
 app.use(bodyParser.urlencoded({ extended: true }))
