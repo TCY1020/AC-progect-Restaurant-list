@@ -23,5 +23,5 @@ app.use(routers)
 
 
 app.listen(port, () => {
-  console.log(`Restaurant-list is running on http://localhost:${port}`)
+  console.log(`Restaurant-list is running on http://localhost:${port}/users/login`)
 })

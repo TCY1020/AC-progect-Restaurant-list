@@ -5,8 +5,11 @@ const router = express.Router()
 
 const home = require('./modules/home.js')
 const restaurants = require('./modules/restaurants.js')
+const user = require('./modules/user')
 
-router.use('/', home)
+
+router.use('/users', user)
 router.use('/restaurants', restaurants)
+router.use('/', home)
 
 module.exports = router
