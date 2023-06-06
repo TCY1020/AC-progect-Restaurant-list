@@ -1,9 +1,7 @@
 # AC-project-Restaurant-
 **這是使用 Node.js + Express + MongoDB + Mongoose 與 RESTful架構風格設計的一個餐廳網站。**
 ## 專案畫面
-![MyImage](https://github.com/TCY1020/AC-progect-Restaurant-list/blob/main/public/img/%E9%A4%90%E5%BB%B3%E9%A6%96%E9%A0%81%E6%8E%92%E5%BA%8F%E5%8A%9F%E8%83%BD.png?raw=true)
-![MyImage](https://github.com/TCY1020/AC-progect-Restaurant-list/blob/main/public/img/%E5%85%A7%E5%AE%B9%E4%BB%8B%E7%B4%B9.png)
-![MyImage](https://github.com/TCY1020/AC-progect-Restaurant-list/blob/main/public/img/%E6%96%B0%E5%A2%9E%E9%A4%90%E5%BB%B3%E8%A1%A8%E5%96%AE2.0.png?raw=true)
+![MyImage](./public/img/Recording%202023-06-06%20at%2020.47.08.gif)
 ## Features - 產品功能
 + 查看所以餐廳
 + 使用者可以點擊任一餐廳，查看更多餐廳資訊，如地址、電話與簡介
@@ -12,6 +10,9 @@
 + Edit、Delete功能
 + 新增餐廳功能
 + 可以依不同方式排序餐廳清單
++ Passport 打造註冊功能
++ Facebook 第三方登入
++ 使用 bcrypt 保護使用者的密碼
 ## Environment SetUp - 環境建置
 + Node.js v14.16.0
 + Express 4.16.4
@@ -20,8 +21,12 @@
 + Font-awesome 6.4.0
 + dotenv: 16.0.3
 + mongoose: 5.9.7
-+ body-parser": 1.20.2
-+ 
++ body-parser: 1.20.2
++ express: 4.16.4
++ passport: 0.6.0
++ passport-local: 1.0.0
++ passport-facebook: 3.0.0
++ connect-flash: 0.1.1
 ## Installing - 專案安裝流程
 1. 請先確認有安裝 node.js 與 npm
 2. 創造一個專案資料夾，打開您的 terminal，使用`cd`指令進入您剛創建的資料夾

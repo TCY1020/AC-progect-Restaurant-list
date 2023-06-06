@@ -1,5 +1,6 @@
 const express = require('express')
 const router = express.Router()
+const passport = require('passport')
 const bcrypt = require('bcrypt')
 
 const User = require('../../models/user.js')
@@ -7,6 +8,11 @@ const User = require('../../models/user.js')
 router.get('/login', (req, res) =>{
   res.render('login')
 })
+
+router.post('/login', passport.authenticate('local', {
+  successRedirect: '/',
+  failureRedirect: '/users/login'
+}))
 
 router.get('/register', (req, res) =>{
   res.render('register')
@@ -54,6 +60,17 @@ router.post('/register', (req, res) => {
       .catch(err => console.log(err))
   })
   .catch(err => console.log(err))
+})
+
+router.get('/logout', (req, res) => {
+  req.logOut(err =>{
+    if(err) {
+      return console.log(err)
+    }
+  })
+  //FIXME:不會顯示登出提示，但是warning_msg會顯示
+  req.flash('success_msg', '你已經成功登出。')
+  res.redirect('/users/login')
 })
 
 module.exports = router
