@@ -21,8 +21,8 @@ router.get('/register', (req, res) =>{
 router.post('/register', (req, res) => {
   const { name, email, password, confirmPassword} = req.body
   const errors = []
-  if( !name || !email || !password || !confirmPassword){
-    errors.push({message: '所有欄位都是必填。'})
+  if( !email || !password || !confirmPassword){
+    errors.push({message: '除了Name以外所有欄位都是必填。'})
   }
   if(password !== confirmPassword) {
     errors.push({message: '密碼與確認密碼不相符!'})
@@ -67,8 +67,7 @@ router.get('/logout', (req, res) => {
     if(err) {
       return console.log(err)
     }
-  })
-  //FIXME:不會顯示登出提示，但是warning_msg會顯示
+  })  
   req.flash('success_msg', '你已經成功登出。')
   res.redirect('/users/login')
 })
